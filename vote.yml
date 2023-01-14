@@ -1,7 +1,5 @@
 apiVersion: apps/v1
 kind: Deployment
-metadata:
-  name: nginx
 spec:
   replicas: 1
   selector:
@@ -9,7 +7,7 @@ spec:
       batch: c38
   template:
     metadata:
-      name: nginx
+      name: vote
       labels:
         batch: c38
     spec:
