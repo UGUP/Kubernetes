@@ -16,6 +16,8 @@ spec:
       containers:
       - name: voting
         image: dipesh017/demo:vote
+        ports:
+          - containerPort: 80
        
         
 
