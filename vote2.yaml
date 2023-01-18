@@ -16,8 +16,20 @@ spec:
       containers:
       - name: vote2
         image: dipesh017/demo:vote
-      
-        
+---      
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: vote-service
+spec:
+  type: LoadBalancer
+  selector:
+     batch: vote
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80   
 
      
     
