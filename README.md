@@ -68,3 +68,14 @@ eksctl create cluster -f cluster.yaml
 eksctl create ng -f filename
 
 aws eks update-kubeconfig --region us-east-1 --name my-cluster
+
+
+-----------------------------------
+
+namescpace 
+ kubectl create ns qa
+kubectl apply -f <filename> -n namespace
+
+
+kubectl config use-context <contect-name>
+kubectl config get-context 
