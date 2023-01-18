@@ -1,14 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: redis
+spec:
+  replicas: 
+  selector:
+    matchLabels:
+      batch: redis
+  template:
+    metadata:
+      name: redis
+      labels:
+        batch: redis
+    spec:
+      containers:
+      - name: redis
+        image: redis:alpine
+
 ---
+
 
 apiVersion: v1
 kind: Service
+type: ClusterIP
 metadata:
   name: redis-service
 spec:
-  type: ClusterIP
   selector:
-     batch: nginx
+     batch: redis
   ports:
     - protocol: TCP
       port: 80
       targetPort: 6379
+    
