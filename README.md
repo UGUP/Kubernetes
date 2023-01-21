@@ -76,6 +76,8 @@ aws eks update-kubeconfig --region us-east-1 --name my-cluster
 kubectl logs -f podname
 
 
+kubectl taint node ip-192-168-18-97.ec2.internal app=c38:NoSchedule
+
 -----------------------------------
 
 namescpace 

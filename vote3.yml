@@ -28,3 +28,8 @@ spec:
           limits:
             memory: "2Gi"
             cpu: 1
+      tolerations:
+      - key: app
+        value: c38
+        operator: Equal
+        effect: "NoSchedule      
