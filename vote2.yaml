@@ -23,8 +23,8 @@ spec:
         image: nginx
         resources:
           requests:
-            memory: "10Gi"
-            cpu: "5"
+            memory: ".1Gi"
+            cpu: ".2"
           limits:
             memory: "20Gi"
             cpu: "10Gi"
