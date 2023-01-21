@@ -19,7 +19,7 @@ spec:
         batch: vote2
     spec:
       containers:
-      - name: nginx
+      - name: vote2
         image: nginx
         resources:
           requests:
