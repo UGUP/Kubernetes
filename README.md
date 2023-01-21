@@ -56,6 +56,9 @@ sudo apt-get update
 4. https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/ (link to download Kubectl consists of 3 steps)
 5. sudo apt install awscli (Before running aws eks update command check awscli version. If aws cLi is not present install it with the mentioned command)
 
+Installing or updating eksctl
+https://docs.aws.amazon.com/eks/latest/userguide/eksctl.html
+
 
 #####################################
 EKSCTL
