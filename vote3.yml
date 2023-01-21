@@ -8,7 +8,7 @@ spec:
     rollingUpdate:
       maxSurge: 50%
       maxUnavailable: 50%
-  replicas: 6
+  replicas: 2
   selector:
     matchLabels:
       app: vote
