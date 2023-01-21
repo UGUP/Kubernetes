@@ -18,8 +18,8 @@ spec:
         image: dipesh017/demo:vote
         resources:
           requests:
-            memory: "8Gi"
-            cpu: "4"
+            memory: "10Gi"
+            cpu: "5"
           limits:
             memory: "8Gi"
             cpu: "4Gi"
