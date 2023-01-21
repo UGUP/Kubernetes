@@ -19,7 +19,7 @@ spec:
         app: vote
     spec:
       containers:
-      - image: dipesh017/demo:worker
+      - image: nginx #dipesh017/demo:worker
         name: vote
         resources:
           requests:
