@@ -32,4 +32,4 @@ spec:
       - key: app
         value: c38
         operator: Equal
-        effect: "NoSchedule      
+        effect: "NoSchedule"
