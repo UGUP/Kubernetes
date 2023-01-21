@@ -24,8 +24,8 @@ spec:
         name: vote
         resources:
           requests:
-            memory: "1Gi"
-            cpu: 1
+            memory: "0.2Gi"
+            cpu: 0.4
           limits:
             memory: "2Gi"
             cpu: 1
