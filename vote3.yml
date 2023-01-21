@@ -22,13 +22,13 @@ spec:
       containers:
       - image: dipesh017/demo:worker
         name: vote
-        resources:
-          requests:
-            memory: "0.1Gi"
-            cpu: 1
-          limits:
-            memory: "2Gi"
-            cpu: 1
+        # resources:
+        #   requests:
+        #     memory: "0.1Gi"
+        #     cpu: 1
+        #   limits:
+        #     memory: "2Gi"
+        #     cpu: 1
       tolerations:
       - key: app
         value: c38
