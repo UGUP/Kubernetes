@@ -3,6 +3,11 @@ kind: Deployment
 metadata:
   name: vote2
 spec:
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 100%
+      maxUnavailable: 0%
   replicas: 2
   selector:
     matchLabels:
@@ -14,8 +19,8 @@ spec:
         batch: vote2
     spec:
       containers:
-      - name: vote2
-        image: dipesh017/demo:vote
+      - name: nginx
+        image: nginx
         resources:
           requests:
             memory: "10Gi"
