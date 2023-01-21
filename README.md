@@ -73,6 +73,7 @@ eksctl delete cluster -f cluster.yaml
 eksctl create ng -f filename
 
 aws eks update-kubeconfig --region us-east-1 --name my-cluster
+kubectl logs -f podname
 
 
 -----------------------------------
