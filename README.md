@@ -87,3 +87,31 @@ kubectl apply -f <filename> -n namespace
 
 kubectl config use-context <contect-name>
 kubectl config get-context 
+
+#################################################################3
+METRICS SERVER IN EKS BY DEFAULT ITS NOT THERE 
+
+https://docs.aws.amazon.com/eks/latest/userguide/metrics-server.html
+
+kubectl apply -f https://github.com/kubernetes-sigs/metrics-server/releases/latest/download/components.yaml
+
+kubectl top nodes  (to check the utilization of resources)
+
+
+#############################################################################################3
+
+HPA  (add in yml file from kubernetes documentation)
+
+kubectl get hpa
+kubectl describe hpa vote
+
+
+#########################################################################33
+HELM CHARTS
+install helm
+
+https://helm.sh/docs/intro/install/
+
+grafana helm chart example
+
+https://github.com/grafana/helm-charts/tree/main/charts/grafana
