@@ -1,0 +1,44 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: vote
+spec:
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 100%
+      maxUnavailable: 0%
+  replicas: 6
+  selector:
+    matchLabels:
+      app: vote
+  template:
+    metadata:
+      name: vote
+      labels:
+        app: vote
+    spec:
+      containers:
+      - image: dipesh017/demo:worker
+        name: vote
+        resources:
+          requests:
+            memory: ".1Gi"
+            cpu: .1
+          limits:
+            memory: "2Gi"
+            cpu: 1
+      tolerations:
+       - key: app
+         value: c38
+         operator: Equal
+         effect: "NoSchedule"
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+            - matchExpressions:
+              - key: name
+                operator: In
+                values:
+                - tainted
